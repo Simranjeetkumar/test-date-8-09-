@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+@FunctionalInterface
+interface OddNo{
+	void oddNo();
+}
 public class ArraylistforOddNo {
 
 	public static void main(String[] args) {
@@ -17,14 +21,17 @@ public class ArraylistforOddNo {
 		l1.add(user_no);
 			}
 		}
-		for(int i: l1) {
-			if(i%2 != 0) {
-				System.out.print(i);
-				System.out.print(" ");
+		OddNo Inter_obj = ()->{
+			for(int i: l1) {
+				if(i%2 != 0) {
+					System.out.print(i);
+					System.out.print(" ");
+				}
 			}
-		}
+			
+		};
 		
-
+	Inter_obj.oddNo();			
 	}
 
 }
